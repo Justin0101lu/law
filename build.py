@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
-"""Assemble static pages for Freight Owed Law from a shared shell."""
+"""Assemble static pages for Carrier Counsel from a shared shell."""
 import os, sys
 
 OUT = sys.argv[1] if len(sys.argv) > 1 else "."
-SITE = "https://freightowed.com"
-PHONE = "(555) 012-3456"
-PHONE_HREF = "tel:+15550123456"
-EMAIL = "intake@freightowed.com"
+SITE = "https://carriercounsel.com"
+EMAIL = "intake@carriercounsel.com"
 
 def shell(title, desc, path, body, extra_head=""):
     canonical = SITE + ("/" if path == "index.html" else "/" + path)
@@ -35,14 +33,14 @@ def shell(title, desc, path, body, extra_head=""):
   <div class="topbar">
     <div class="container">
       <span>Recovering unpaid freight charges for motor carriers nationwide</span>
-      <span>Call <a href="{PHONE_HREF}">{PHONE}</a> &middot; <a href="mailto:{EMAIL}">{EMAIL}</a></span>
+      <span><a href="mailto:{EMAIL}">{EMAIL}</a></span>
     </div>
   </div>
   <header class="site-header">
     <div class="container">
       <a class="brand" href="index.html">
         <img class="mark" src="assets/logo.svg" alt="" width="42" height="42">
-        <span><span class="name">Freight Owed Law</span><span class="tag">Transportation Collections Counsel</span></span>
+        <span><span class="name">Carrier Counsel</span><span class="tag">Transportation Collections Attorneys</span></span>
       </a>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
       <nav class="nav" id="nav" aria-label="Primary">
@@ -64,7 +62,7 @@ def shell(title, desc, path, body, extra_head=""):
         <p>Every unpaid invoice has a deadline, and the debtor's money rarely waits for it. Talk to us before it's gone.</p>
       </div>
       <div style="display:flex;gap:.8rem;flex-wrap:wrap">
-        <a class="btn btn-outline" href="{PHONE_HREF}">Call {PHONE}</a>
+        <a class="btn btn-outline" href="mailto:{EMAIL}">Email us</a>
         <a class="btn btn-primary" style="background:#0b2545;color:#fff" href="contact.html">Start a claim</a>
       </div>
     </div>
@@ -73,7 +71,7 @@ def shell(title, desc, path, body, extra_head=""):
     <div class="container">
       <div class="footer-grid">
         <div>
-          <a class="brand" href="index.html" style="color:#fff"><img class="mark" src="assets/logo.svg" alt="" width="42" height="42"><span><span class="name">Freight Owed Law</span><span class="tag" style="color:#8ea0ba">Transportation Collections Counsel</span></span></a>
+          <a class="brand" href="index.html" style="color:#fff"><img class="mark" src="assets/logo.svg" alt="" width="42" height="42"><span><span class="name">Carrier Counsel</span><span class="tag" style="color:#8ea0ba">Transportation Collections Attorneys</span></span></a>
           <p style="margin-top:1rem;max-width:36ch">A transportation law practice built for one job: getting motor carriers paid for the freight they hauled.</p>
         </div>
         <div>
@@ -96,7 +94,6 @@ def shell(title, desc, path, body, extra_head=""):
         <div>
           <h4>Contact</h4>
           <ul>
-            <li><a href="{PHONE_HREF}">{PHONE}</a></li>
             <li><a href="mailto:{EMAIL}">{EMAIL}</a></li>
             <li>Mon&ndash;Fri, 8am&ndash;6pm CT</li>
           </ul>
@@ -104,7 +101,7 @@ def shell(title, desc, path, body, extra_head=""):
       </div>
       <div class="legal">
         <p><strong>Attorney advertising.</strong> This website is for general information only and is not legal advice. Viewing this site, or sending us a message through it, does not create an attorney&ndash;client relationship. Do not send confidential information until an engagement letter is signed. Prior results do not guarantee a similar outcome. Contingency fees, where offered, are computed before deduction of costs and expenses.</p>
-        <p>&copy; <span data-year>2026</span> Freight Owed Law. All rights reserved. &middot; <a href="privacy.html">Privacy</a></p>
+        <p>&copy; <span data-year>2026</span> Carrier Counsel. All rights reserved. &middot; <a href="privacy.html">Privacy</a></p>
       </div>
     </div>
   </footer>
@@ -127,7 +124,7 @@ home = f"""
         <div>
           <span class="eyebrow" style="color:#f2a900">Transportation law &middot; Carrier collections</span>
           <h1>You hauled the load. <em>You deserve to get paid.</em></h1>
-          <p class="lede">Freight Owed Law represents trucking companies against brokers that went out of business, shippers that won't pay, and fraud operations that charged you unlawfully. We recover what you're owed, and you don't pay us unless we do.</p>
+          <p class="lede">Carrier Counsel represents trucking companies against brokers that went out of business, shippers that won't pay, and fraud operations that charged you unlawfully. We recover what you're owed, and you don't pay us unless we do.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="contact.html">Get a free claim evaluation</a>
             <a class="btn btn-light" href="#process">See how it works</a>
@@ -313,7 +310,7 @@ broker = f"""
             <li>A new MC number or company name appears on rate confirmations</li>
             <li>Load board reports of non-payment from other carriers</li>
           </ul>
-          <p>If you're seeing these, stop hauling for them and call us before the bond is gone.</p>
+          <p>If you're seeing these, stop hauling for them and contact us before the bond is gone.</p>
           <a class="btn btn-primary" href="contact.html" style="width:100%">Start a bond claim</a>
         </aside>
       </div>
@@ -354,7 +351,7 @@ shippers = f"""
           <h3>Portfolio collections for fleets</h3>
           <p>Send us your aging report. We triage every open invoice, group them by debtor, and pursue them together, which increases recovery and lowers cost per claim.</p>
 
-          <div class="callout"><strong>Statute of limitations:</strong> In most states a carrier has up to four years from non-payment to sue on an unpaid invoice, but the period varies by state, and invoices older than a year or two are much harder to collect in practice. Call us now, not at year three.</div>
+          <div class="callout"><strong>Statute of limitations:</strong> In most states a carrier has up to four years from non-payment to sue on an unpaid invoice, but the period varies by state, and invoices older than a year or two are much harder to collect in practice. Contact us now, not at year three.</div>
         </div>
         <aside class="aside reveal">
           <h3>Protect your next load</h3>
@@ -430,14 +427,14 @@ about = f"""
       <div class="container">
         <div class="breadcrumb"><a href="index.html">Home</a> / About</div>
         <h1>A law firm that only works for carriers</h1>
-        <p class="lede">We built Freight Owed Law because trucking companies were getting the worst of both worlds: collection agencies that don't understand transportation, and transportation lawyers who don't do collections.</p>
+        <p class="lede">We built Carrier Counsel because trucking companies were getting the worst of both worlds: collection agencies that don't understand transportation, and transportation lawyers who don't do collections.</p>
       </div>
     </section>
     <section class="section">
       <div class="container split">
         <div class="prose reveal">
           <h2>Our focus</h2>
-          <p>Freight Owed Law is a transportation law practice focused exclusively on recovering money owed to motor carriers. We handle broker insolvency and bankruptcy claims, shipper and consignee collections, freight fraud, unlawful chargebacks, and the defense of bankruptcy preference demands. We do not represent brokers or shippers against carriers.</p>
+          <p>Carrier Counsel is a transportation law practice focused exclusively on recovering money owed to motor carriers. We handle broker insolvency and bankruptcy claims, shipper and consignee collections, freight fraud, unlawful chargebacks, and the defense of bankruptcy preference demands. We do not represent brokers or shippers against carriers.</p>
 
           <h2>How we work</h2>
           <ul>
@@ -525,7 +522,7 @@ contact = f"""
         </div>
         <aside class="aside reveal">
           <h3>Reach us directly</h3>
-          <p><strong>Phone:</strong> <a href="{PHONE_HREF}">{PHONE}</a><br><strong>Email:</strong> <a href="mailto:{EMAIL}">{EMAIL}</a><br><strong>Hours:</strong> Mon&ndash;Fri, 8am&ndash;6pm CT</p>
+          <p><strong>Email:</strong> <a href="mailto:{EMAIL}">{EMAIL}</a><br><strong>Hours:</strong> Mon&ndash;Fri, 8am&ndash;6pm CT</p>
           <h3>What to send</h3>
           <ul>
             <li>Rate confirmation</li>
@@ -557,7 +554,7 @@ privacy = """
         <h2>Service providers</h2>
         <p>Form submissions may be processed by a third-party form service and email provider. Those providers process the data on our behalf under their own privacy terms.</p>
         <h2>Contact</h2>
-        <p>Questions about this policy can be sent to intake@freightowed.com.</p>
+        <p>Questions about this policy can be sent to intake@carriercounsel.com.</p>
       </div>
     </section>
 """
@@ -578,11 +575,10 @@ LD = """  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    "name": "Freight Owed Law",
-    "url": "https://freightowed.com/",
+    "name": "Carrier Counsel",
+    "url": "https://carriercounsel.com/",
     "description": "Transportation law firm recovering unpaid freight charges for motor carriers: broker bankruptcy claims, unpaid shipper collections, and freight fraud.",
-    "telephone": "+1-555-012-3456",
-    "email": "intake@freightowed.com",
+    "email": "intake@carriercounsel.com",
     "areaServed": "US",
     "priceRange": "Contingency fee on most matters",
     "knowsAbout": ["Freight collections", "Broker surety bond claims", "Bankruptcy preference defense", "Double brokering", "Carmack Amendment"]
@@ -591,26 +587,26 @@ LD = """  <script type="application/ld+json">
 """
 
 pages = {
-    "index.html": ("Freight Owed Law | Transportation Lawyers Who Get Carriers Paid",
+    "index.html": ("Carrier Counsel | Transportation Lawyers Who Get Carriers Paid",
                    "Transportation law firm that recovers unpaid freight charges for trucking companies: broker bankruptcy and bond claims, shippers that won't pay, and freight fraud. Contingency fees. Free claim evaluation.",
                    home, LD),
-    "broker-bankruptcy.html": ("Broker Went Out of Business? Carrier Bond & Bankruptcy Claims | Freight Owed Law",
+    "broker-bankruptcy.html": ("Broker Went Out of Business? Carrier Bond & Bankruptcy Claims | Carrier Counsel",
                    "When a freight broker closes or files bankruptcy, carriers can still recover: BMC-84 bond claims, proofs of claim, shipper liability, and preference defense. Free evaluation.",
                    broker, ""),
-    "unpaid-shippers.html": ("Shipper Won't Pay Freight Charges? Carrier Collections | Freight Owed Law",
+    "unpaid-shippers.html": ("Shipper Won't Pay Freight Charges? Carrier Collections | Carrier Counsel",
                    "Attorney demand letters, litigation, and judgment enforcement against shippers and consignees that don't pay motor carriers. Contingency fees. Free evaluation.",
                    shippers, ""),
-    "freight-fraud.html": ("Freight Fraud, Double Brokering & Unlawful Chargebacks | Freight Owed Law",
+    "freight-fraud.html": ("Freight Fraud, Double Brokering & Unlawful Chargebacks | Carrier Counsel",
                    "Recover losses from double brokering, carrier identity theft, unlawful chargebacks, and fraudulent cargo claims. Transportation attorneys for motor carriers.",
                    fraud, ""),
-    "about.html": ("About Freight Owed Law | Carrier-Side Transportation Attorneys",
+    "about.html": ("About Carrier Counsel | Carrier-Side Transportation Attorneys",
                    "A transportation law practice focused exclusively on recovering money owed to motor carriers. Contingency fees, nationwide reach, fast written evaluations.",
                    about, ""),
-    "contact.html": ("Free Claim Evaluation | Freight Owed Law",
+    "contact.html": ("Free Claim Evaluation | Carrier Counsel",
                    "Send us your unpaid load and get a written evaluation within one business day: who is liable, what deadlines apply, and what recovery looks like.",
                    contact, ""),
-    "privacy.html": ("Privacy Policy | Freight Owed Law", "Privacy policy for freightowed.com.", privacy, '  <meta name="robots" content="noindex">\n'),
-    "404.html": ("Page Not Found | Freight Owed Law", "The page you requested could not be found.", notfound, '  <meta name="robots" content="noindex">\n'),
+    "privacy.html": ("Privacy Policy | Carrier Counsel", "Privacy policy for carriercounsel.com.", privacy, '  <meta name="robots" content="noindex">\n'),
+    "404.html": ("Page Not Found | Carrier Counsel", "The page you requested could not be found.", notfound, '  <meta name="robots" content="noindex">\n'),
 }
 
 for path, (title, desc, body, extra) in pages.items():

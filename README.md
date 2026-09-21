@@ -1,6 +1,6 @@
-# Freight Owed Law — freightowed.com
+# Carrier Counsel — carriercounsel.com
 
-Marketing website for **Freight Owed Law**, a transportation law practice that recovers
+Marketing website for **Carrier Counsel**, a transportation law practice that recovers
 unpaid freight charges for motor carriers:
 
 - brokers that went out of business (bond claims, bankruptcy proofs of claim, shipper liability, preference defense)
@@ -12,12 +12,12 @@ The site is plain static HTML/CSS/JS with no build dependencies, so it can be ho
 
 ## Domain
 
-`freightowed.com` was **unregistered** when this site was built (verified against the Verisign RDAP
+`carriercounsel.com` was **unregistered** when this site was built (verified against the Verisign RDAP
 registry). Register it at a low-cost registrar such as Cloudflare Registrar or Porkbun; a `.com`
 runs roughly $10–12 per year at cost-based registrars.
 
 Backup names that were also unregistered at the same time:
-`carrierrecoverylaw.com`, `haulrecoverylaw.com`, `unpaidfreightlaw.com`, `freightclaimlaw.com`, `owedfreight.com`.
+`ladinglaw.com`, `milepostlaw.com`, `interstatecarrierlaw.com`, `carrierrecoverylaw.com`, `carriercounsel.com`.
 
 ## Files
 
@@ -37,8 +37,8 @@ Editing the HTML files directly also works if you don't need the shared shell.
 
 ## Before launch (placeholders to replace)
 
-1. **Phone number** `(555) 012-3456` and email `intake@freightowed.com` appear in `build.py`
-   (and in every page). Replace with real contact details.
+1. **Email** `intake@carriercounsel.com` appears in `build.py` (and in every page). Replace with the
+   real intake address once the domain's mailbox exists. The site deliberately lists no phone number.
 2. **Contact form**: `contact.html` posts to `https://formspree.io/f/YOUR_FORM_ID`. Create a free
    form at formspree.io (or any similar service) and paste the real endpoint. Until then, the form
    falls back to opening the visitor's email client with the details pre-filled.
@@ -63,7 +63,7 @@ https://justin0101lu.github.io/law/ until a custom domain is attached.
 
 ## Pointing the domain at GitHub Pages
 
-1. In the repo, **Settings → Pages → Custom domain**: enter `freightowed.com` and save.
+1. In the repo, **Settings → Pages → Custom domain**: enter `carriercounsel.com` and save.
    GitHub creates a `CNAME` file in the repo.
 2. At your registrar, add DNS records:
    - `A` records for `@` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
