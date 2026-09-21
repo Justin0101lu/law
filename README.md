@@ -51,27 +51,19 @@ Editing the HTML files directly also works if you don't need the shared shell.
    (49 U.S.C. § 14705, the $75,000 BMC-84/85 broker bond, the Carmack Amendment, bankruptcy
    preference rules) are accurate as general background, but specifics vary by jurisdiction and facts.
 
-## Moving this folder into its own repository
+## Repository and hosting
 
-This site was developed inside the `personal-site` repo because the session could not create
-repositories. To give it its own repo (recommended, and required for GitHub Pages to serve it at
-the root of the domain):
+This site lives at https://github.com/Justin0101lu/law. The workflow in
+`.github/workflows/pages.yml` deploys to GitHub Pages on every push to `main`.
 
-```bash
-# 1. Create an empty repo on GitHub named freight-owed-law (no README, no .gitignore).
-
-# 2. From a clone of personal-site, on the branch that contains this folder:
-git subtree split --prefix=freight-owed-law -b freight-owed-law-main
-git push https://github.com/Justin0101lu/freight-owed-law.git freight-owed-law-main:main
-git branch -D freight-owed-law-main
-```
-
-Then in the new repo: **Settings → Pages → Source: GitHub Actions**. The included workflow
-deploys on every push to `main`.
+One-time setup: in the repo, open **Settings → Pages** and set **Source** to **GitHub Actions**.
+The workflow's built-in token cannot create the Pages site itself, so until this is done the deploy
+job fails at the "configure-pages" step. After that, the site is served at
+https://justin0101lu.github.io/law/ until a custom domain is attached.
 
 ## Pointing the domain at GitHub Pages
 
-1. In the new repo, **Settings → Pages → Custom domain**: enter `freightowed.com` and save.
+1. In the repo, **Settings → Pages → Custom domain**: enter `freightowed.com` and save.
    GitHub creates a `CNAME` file in the repo.
 2. At your registrar, add DNS records:
    - `A` records for `@` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
