@@ -61,7 +61,7 @@ def shell(title, desc, path, body, extra_head=""):
     <div class="container">
       <div>
         <h2>Don't let an unpaid load turn into a write-off.</h2>
-        <p>Federal law gives carriers a limited window to sue for unpaid charges. Talk to us before it closes.</p>
+        <p>Every unpaid invoice has a deadline, and the debtor's money rarely waits for it. Talk to us before it's gone.</p>
       </div>
       <div style="display:flex;gap:.8rem;flex-wrap:wrap">
         <a class="btn btn-outline" href="{PHONE_HREF}">Call {PHONE}</a>
@@ -136,8 +136,8 @@ home = f"""
         </div>
         <div class="hero-card reveal">
           <span class="eyebrow">Time matters</span>
-          <h3>18 months. That's the clock.</h3>
-          <p>Under 49 U.S.C. &sect;&nbsp;14705, a motor carrier generally has <strong>18 months from delivery</strong> to file suit for unpaid freight charges. Broker bond claims and bankruptcy proof-of-claim deadlines are often much shorter.</p>
+          <h3>The four-year rule.</h3>
+          <p>An unpaid freight invoice is a breach of contract. In most states you have <strong>up to four years</strong> from the date it went unpaid to file suit. Broker bond claims and bankruptcy proof-of-claim deadlines are far shorter, and the money is often gone long before the legal deadline.</p>
           <p class="small">Every week an invoice sits unpaid, the odds of recovery drop. Send us the paperwork and we'll tell you where you stand within one business day.</p>
           <a class="btn btn-outline btn-sm" href="contact.html">Check my deadline</a>
         </div>
@@ -148,7 +148,7 @@ home = f"""
       <div class="container">
         <div class="stats reveal">
           <div class="stat"><b>$75,000</b><span>Federal surety bond every licensed broker must carry (BMC-84/85). We file your claim before it's exhausted.</span></div>
-          <div class="stat"><b>18 mo.</b><span>Federal limitations period for carrier actions to recover freight charges.</span></div>
+          <div class="stat"><b>4 years</b><span>Typical contract limitations period for unpaid freight in most states. Bond and bankruptcy deadlines are far shorter.</span></div>
           <div class="stat"><b>48 states</b><span>We pursue debtors wherever they are, with local counsel where needed.</span></div>
           <div class="stat"><b>0 upfront</b><span>Most matters handled on contingency. No recovery, no attorney's fee.</span></div>
         </div>
@@ -255,7 +255,7 @@ home = f"""
         </div>
         <div class="faq reveal" style="margin-top:2rem">
           <details><summary>The broker went out of business. Is my money gone?</summary><p>Not necessarily. Every licensed broker must maintain a $75,000 surety bond or trust fund. You can file a claim against it, but it pays first come, first served and is often exhausted within weeks. In many situations the shipper can also be liable for the freight charges even though it already paid the broker. If the broker filed bankruptcy, you may also file a proof of claim in the case. The right move depends on your documents, and that is exactly what our free evaluation covers.</p></details>
-          <details><summary>How long do I have to sue for unpaid freight charges?</summary><p>Under federal law (49 U.S.C. &sect; 14705) a carrier generally must begin a civil action to recover charges within 18 months after the claim accrues, which is usually the delivery date. Bond claims and bankruptcy bar dates can be much shorter, and state-law claims may have different periods. Do not assume you have time.</p></details>
+          <details><summary>How long do I have to sue for unpaid freight charges?</summary><p>An unpaid invoice is a breach of contract claim, and in most states the statute of limitations for that is four years from the date payment came due. Some states allow more, a few allow less, and the period can differ for written versus oral agreements. Bond claims and bankruptcy bar dates are measured in weeks, not years. Whatever the legal deadline, the practical deadline is sooner: the longer an invoice sits, the more likely the debtor's money is gone. Send us the file and we will confirm your deadline in writing.</p></details>
           <details><summary>What does it cost?</summary><p>Most collection matters are handled on a contingency fee: we take an agreed percentage of what we recover and you pay no attorney's fee if we recover nothing. Court filing fees and similar costs are handled as described in your engagement letter. Some matters, like defending a bankruptcy preference demand, are handled on a flat or hourly basis. We tell you up front which applies.</p></details>
           <details><summary>My loads were factored. Can I still hire you?</summary><p>Usually, yes. The factoring company may own the receivable, in which case we coordinate with them, or the invoice may have been charged back to you, in which case you have the claim. Send us the factoring agreement and we will sort out who has standing.</p></details>
           <details><summary>I got a letter from a bankruptcy trustee demanding I pay back money a broker paid me. Is that real?</summary><p>Yes. In bankruptcy, payments made in the 90 days before the filing can be clawed back as "preferences." There are strong defenses, including ordinary course of business and new value, and trustees frequently settle for a fraction of the demand. Do not ignore the letter and do not pay it without talking to a lawyer.</p></details>
@@ -299,7 +299,7 @@ broker = f"""
             <tr><th>Action</th><th>Typical timing</th></tr>
             <tr><td>Bond / trust fund claim</td><td>As soon as possible. Funds are paid first come, first served.</td></tr>
             <tr><td>Bankruptcy proof of claim</td><td>By the bar date set by the court, often 70&ndash;90 days after the case begins.</td></tr>
-            <tr><td>Civil action for freight charges</td><td>Generally 18 months from accrual under 49 U.S.C. &sect; 14705.</td></tr>
+            <tr><td>Civil action for freight charges</td><td>Up to four years from non-payment under most states' contract law; varies by state and by the debtor.</td></tr>
             <tr><td>Responding to a preference demand</td><td>Trustees typically give 20&ndash;30 days before filing suit.</td></tr>
           </table>
           <div class="callout"><strong>Got a bankruptcy notice?</strong> Do not throw it away and do not call the broker's old number. Send it to us the same day.</div>
@@ -354,7 +354,7 @@ shippers = f"""
           <h3>Portfolio collections for fleets</h3>
           <p>Send us your aging report. We triage every open invoice, group them by debtor, and pursue them together, which increases recovery and lowers cost per claim.</p>
 
-          <div class="callout"><strong>Statute of limitations:</strong> A carrier's civil action to recover freight charges generally must be filed within 18 months of accrual under 49 U.S.C. &sect; 14705. Older invoices may still be recoverable through other theories, but call us now.</div>
+          <div class="callout"><strong>Statute of limitations:</strong> In most states a carrier has up to four years from non-payment to sue on an unpaid invoice, but the period varies by state, and invoices older than a year or two are much harder to collect in practice. Call us now, not at year three.</div>
         </div>
         <aside class="aside reveal">
           <h3>Protect your next load</h3>
